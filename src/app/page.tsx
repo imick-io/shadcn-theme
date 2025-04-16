@@ -1,103 +1,401 @@
-import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { DataTableDemo } from "../components/demos/data-table-demo";
+import { DatePickerDemo } from "../components/demos/data-picker-demo";
+import { ContextMenuDemo } from "../components/demos/context-menu-demo";
+import { CommandDemo } from "../components/demos/command-demo";
+import { CollapsibleDemo } from "../components/demos/collapsible-demo";
+import { DialogDemo } from "../components/demos/dialog-demo";
+import { DrawerDemo } from "../components/demos/drawer-demo";
+import { DropdownMenuDemo } from "../components/demos/dropdown-menu-demo";
+import { HoverCardDemo } from "../components/demos/hovercard-demo";
+import { MenubarDemo } from "../components/demos/menubar-demo";
+import { NavigationMenuDemo } from "@/components/demos/navigation-menu";
+import { PopoverDemo } from "@/components/demos/popover-demo";
+import { ProgressDemo } from "@/components/demos/progress-demo";
+import { ResizableDemo } from "@/components/demos/resizable-demo";
+import { AccordionDemo } from "@/components/demos/accordion-demo";
+import { AlertDemo } from "@/components/demos/alert-demo";
+import { AlertDialogDemo } from "@/components/demos/alert-dialog-demo";
+import { AvatarDemo } from "@/components/demos/avatar-demo";
+import { BadgeDemo } from "@/components/demos/badge-demo";
+import { BreadcrumbDemo } from "@/components/demos/breadcrump-demo";
+import { ButtonDemo } from "@/components/demos/button-demo";
+import { CalendarDemo } from "@/components/demos/calendar-demo";
+import { CardDemo } from "@/components/demos/card-demo";
+import { CarouselDemo } from "@/components/demos/carousel-demo";
+import { FormDemo } from "@/components/demos/form-demo";
+import { PaginationDemo } from "@/components/demos/pagination-demo";
+import { SeparatorDemo } from "@/components/demos/separator-demo";
+import { SkeletonDemo } from "@/components/demos/skeleton-demo";
+import { SonnerDemo } from "@/components/demos/sonner-demo";
+import { TableDemo } from "@/components/demos/table-demo";
+import { TabsDemo } from "@/components/demos/tabs-demo";
+import { TooltipDemo } from "@/components/demos/tooltip-demo";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="px-10 py-10">
+      <main>
+        <div className="mb-10">
+          <h1 className="text-4xl font-bold">Components</h1>
+          <Separator />
+        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="space-y-10">
+          <section id="accordion">
+            <Card>
+              <CardHeader>
+                <CardTitle>Accordion</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <AccordionDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="alert">
+            <Card>
+              <CardHeader>
+                <CardTitle>Alert</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <AlertDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="alert-dialog">
+            <Card>
+              <CardHeader>
+                <CardTitle>Alert Dialog</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <AlertDialogDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="avatar">
+            <Card>
+              <CardHeader>
+                <CardTitle>Avatar</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <AvatarDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="badges">
+            <Card>
+              <CardHeader>
+                <CardTitle>Badges</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <BadgeDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="breadcrumb">
+            <Card>
+              <CardHeader>
+                <CardTitle>Breadcrumb</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <BreadcrumbDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="buttons">
+            <Card>
+              <CardHeader>
+                <CardTitle>Buttons</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ButtonDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="calendar">
+            <Card>
+              <CardHeader>
+                <CardTitle>Calendar</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CalendarDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="card">
+            <Card>
+              <CardHeader>
+                <CardTitle>Card</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="carousel">
+            <Card>
+              <CardHeader>
+                <CardTitle>Carousel</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CarouselDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="collapsible">
+            <Card>
+              <CardHeader>
+                <CardTitle>Collapsible</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CollapsibleDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="command">
+            <Card>
+              <CardHeader>
+                <CardTitle>Command</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CommandDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="context-menu">
+            <Card>
+              <CardHeader>
+                <CardTitle>Context Menu</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ContextMenuDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="data-table">
+            <Card>
+              <CardHeader>
+                <CardTitle>Data Table</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <DataTableDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="date-picker">
+            <Card>
+              <CardHeader>
+                <CardTitle>Date Picker</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <DatePickerDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="dialog">
+            <Card>
+              <CardHeader>
+                <CardTitle>Dialog</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <DialogDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="drawer">
+            <Card>
+              <CardHeader>
+                <CardTitle>Drawer</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <DrawerDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="dropdown-menu">
+            <Card>
+              <CardHeader>
+                <CardTitle>Dropdown Menu</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <DropdownMenuDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="hover-card">
+            <Card>
+              <CardHeader>
+                <CardTitle>Hover Card</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <HoverCardDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="menubar">
+            <Card>
+              <CardHeader>
+                <CardTitle>Menubar</CardTitle>
+              </CardHeader>
+              <CardContent className="inline-flex mx-auto">
+                <MenubarDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="navigation-menu">
+            <Card>
+              <CardHeader>
+                <CardTitle>Navigation Menu</CardTitle>
+              </CardHeader>
+              <CardContent className="inline-flex mx-auto">
+                <NavigationMenuDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="navigation-menu">
+            <Card>
+              <CardHeader>
+                <CardTitle>Pagination</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <PaginationDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="popover">
+            <Card>
+              <CardHeader>
+                <CardTitle>Popover</CardTitle>
+              </CardHeader>
+              <CardContent className="inline-flex mx-auto">
+                <PopoverDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="progress">
+            <Card>
+              <CardHeader>
+                <CardTitle>Progress</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ProgressDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="resizable">
+            <Card>
+              <CardHeader>
+                <CardTitle>Resizable</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ResizableDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="separator">
+            <Card>
+              <CardHeader>
+                <CardTitle>Separator</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <SeparatorDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="skeleton">
+            <Card>
+              <CardHeader>
+                <CardTitle>Skeleton</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <SkeletonDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="sonner">
+            <Card>
+              <CardHeader>
+                <CardTitle>Sonner</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <SonnerDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="table">
+            <Card>
+              <CardHeader>
+                <CardTitle>Table</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <TableDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="tabs">
+            <Card>
+              <CardHeader>
+                <CardTitle>Tabs</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <TabsDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="tooltip">
+            <Card>
+              <CardHeader>
+                <CardTitle>Tooltip</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <TooltipDemo />
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="forms">
+            <Card>
+              <CardHeader>
+                <CardTitle>Forms</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <FormDemo />
+              </CardContent>
+            </Card>
+          </section>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
