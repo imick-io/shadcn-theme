@@ -32,6 +32,9 @@ import { SonnerDemo } from "@/components/demos/sonner-demo";
 import { TableDemo } from "@/components/demos/table-demo";
 import { TabsDemo } from "@/components/demos/tabs-demo";
 import { TooltipDemo } from "@/components/demos/tooltip-demo";
+import { ChartBars } from "@/components/demos/chart-bars";
+import { ChartPie } from "@/components/demos/chart-pie";
+import { ChartStacked } from "@/components/demos/chart-stacked";
 
 export default function Home() {
   return (
@@ -148,6 +151,19 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <CarouselDemo />
+            </CardContent>
+          </Card>
+        </section>
+
+        <section id="charts">
+          <Card>
+            <CardHeader>
+              <CardTitle>Charts</CardTitle>
+            </CardHeader>
+            <CardContent className="max-w-lg flex flex-col gap-4">
+              <ChartBars />
+              <ChartPie />
+              <ChartStacked />
             </CardContent>
           </Card>
         </section>
